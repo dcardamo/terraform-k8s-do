@@ -19,6 +19,11 @@ have the following features:
 3.  `terraform apply -var-file=autobots.tfvars`
 4.  `cp kubeconfig.yaml ~/.kube/config`
 
+## More environments
+
+You can setup more environments such as "staging" using this setup.   Copy the prod folder to you new environment name
+such as "staging" and then follow the steps in Setup above
+
 
 ## Attribution
 
