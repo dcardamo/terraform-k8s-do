@@ -19,6 +19,19 @@ have the following features:
 3.  `terraform apply -var-file=autobots.tfvars`
 4.  `cp kubeconfig.yaml ~/.kube/config`
 
+Here is an example prod.tfvars:
+```hcl
+cluster_name = "production"
+k8s_version = "1.13.4-do.0"
+node_size = "s-1vcpu-2gb"
+cluster_size = 2
+do_zone = "nyc1"
+traefik_replicas = 2
+do_token = "your_do_token"
+lets_encrypt_email = "me@example.com"
+lets_encrypt_main_domain = "example.com"
+```
+
 ## More environments
 
 You can setup more environments such as "staging" using this setup.   Copy the prod folder to you new environment name
