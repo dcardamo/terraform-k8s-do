@@ -1,0 +1,25 @@
+ssl:
+  enabled: true        # Enables SSL
+  enforced: true       # Redirects HTTP to HTTPS
+rbac:
+  enabled: true
+accessLogs:
+  enabled: true
+debug:
+  enabled: true
+dashboard:
+  enabled: true
+acme:
+  enabled: true             # Enables Let's Encrypt certificates
+  staging: false
+  logging: true
+  email: "${lets_encrypt_email}"
+  challengeType: "dns-01"
+  dnsProvider:              
+    name:  digitalocean     # This is why you need your domain to be under Digital Ocean control
+  domains:
+    enabled: true
+    domainsList:
+      - main: "*.${lets_encrypt_main_domain}"
+      - sans:
+        - "${lets_encrypt_main_domain}"
