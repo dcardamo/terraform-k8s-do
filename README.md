@@ -18,7 +18,6 @@ have the following features:
 2.  `terraform init`
 3.  `terraform apply -var-file=autobots.tfvars`
 4.  `cp kubeconfig.yaml ~/.kube/config`
-5.  `make encrypt`
 
 
 ## Attribution
